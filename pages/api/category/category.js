@@ -14,5 +14,11 @@ export default async function handler (req, res) {
       } catch (error) {
         return res.status(500).json({ error: error.message })
       }
+    case 'POST':
+      try {
+        console.log('POST: ', body)
+      } catch (error) {
+        return res.status(500).json({ error: error.message })
+      }
   }
 }
