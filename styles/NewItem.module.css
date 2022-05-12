@@ -1,0 +1,8 @@
+.NewItem {
+    box-shadow: -1px 1px 4px 1px var(--info) !important;
+}
+
+.NewItem svg {
+    stroke: var(--info);
+    filter: blur(1.1px);
+}

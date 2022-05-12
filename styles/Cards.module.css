@@ -1,0 +1,68 @@
+.Cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--gap);
+}
+
+.Cards div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    min-height: 408px;
+    background: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+    flex: 1 1 30rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    border: 0.1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.Cards svg {
+    width: 100%;
+    height: 100%;
+}
+
+.Cards div p {
+    margin-top: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .Cards div {
+        display: grid;
+        grid-template-areas:
+            "head title"
+            "head text";
+        max-width: 100%;
+        min-height: 153px;
+        margin: 0 18px;
+        padding: 0;
+    }
+
+    .Cards div header {
+        grid-area: head;
+    }
+
+    .Cards div h3 {
+        grid-area: title;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .Cards div p {
+        grid-area: text;
+        font-size: 11px;
+        margin: 0;
+        align-items: flex-start;
+    }
+}

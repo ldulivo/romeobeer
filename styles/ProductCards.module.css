@@ -1,0 +1,104 @@
+.ProductCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(147px, 231px));
+    grid-auto-rows: 270px;
+    gap: 4px;
+    padding: 20px 14px 20px 14px;
+}
+
+.ProductCards section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 270px;
+    background: var(--white);
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 #0000001a;
+    position: relative;
+}
+
+.ProductCards section span {
+    margin-bottom: 25px;
+}
+
+.oferta_patch {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 5px;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: 4px;
+    right: 4px;
+    border-radius: 50%;
+}
+
+.oferta_patch::after {
+    content: "% off";
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 13px;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.img img {
+    height: 100px !important;
+}
+
+.oferta_duration {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.oferta_precio_antes {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.oferta_precio_antes span {
+    position: relative;
+}
+
+/* .oferta_precio_antes span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--red);
+    clip-path: path('M 0 8 L 30 3 L 30 5 L 0 10 z');
+    opacity: 0.3;
+} */
+
+.deactive {
+    opacity: .4;
+}
+
+@media (max-width: 964px) {
+    .ProductCards {
+        grid-template-columns: repeat(auto-fit, minmax(147px, 1fr));
+    }
+}

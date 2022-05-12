@@ -1,0 +1,57 @@
+.ClientsButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+}
+
+.ClientsButtons button {
+    /* width: 17px;
+    height: 17px;
+    background: transparent;
+    border: none; */
+
+    /* width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 17px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 2px 3px 4px 1px #c5c5c5, 0px 0px 2px 0px inset #c5c5c5;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    cursor: grab;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    border: none;
+    place-content: center;
+    border-radius: 50%;
+    box-shadow: 3px 2px 2px 0 #00000099, -1px -1px 4px 0px #000000b5;
+}
+
+.ClientsButtons button:active {
+    transform: scale(1.5);
+    box-shadow: 1px 1px 1px 0 #00000099, inset -2px 0px 4px 0px #000000b5;
+}
+
+.ClientsButtons button:active > p {
+    color: var(--secondary);
+    transform: scale(1.5);
+    text-shadow: 1px 1px 3px #ccd0d4, -1px -1px 5px #000000cc, 0px 0px 3px #fff;
+}
+
+.ClientsButtons input {
+    width: calc(60% - 52px);
+    border: none;
+    background: transparent;
+    text-align: center;
+}
